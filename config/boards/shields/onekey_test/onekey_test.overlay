@@ -1,10 +1,10 @@
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-    };
+  chosen {
+    zmk,kscan = &kscan0;
+  };
 
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-direct";
-        input-gpios = <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    };
+  kscan0: kscan_0 {
+    compatible = "zmk,kscan-gpio-direct";
+    input-gpios = <&gpio0 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; /* P0.03 = D1 */
+  };
 };
